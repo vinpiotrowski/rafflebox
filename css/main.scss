@@ -1,0 +1,590 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font: 'Noto Sans', sans-serif;
+
+$white: #FFFFFF;
+
+$black: #313131;
+
+$green: #56B65E;
+
+$pale-green: #C7EFCA;
+
+$pale-blue: #e9f8fb;
+
+$grey: #636363;
+
+$pale-grey: #999999;
+
+$light-grey: #CCCCCC;
+
+$yellow: #F9D11F;
+
+$pale-yellow: #FEF9E4;
+
+$extra-small: 12px;
+
+$small: 14px;
+
+$medium: 17px;
+
+$large: 28px;
+
+$extra-large: 35px;
+
+
+
+
+body, html {
+  color: $black;
+  font-family: $base-font;
+  font-size: $medium;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.decoration {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.decoration:after {
+  background: $pale-blue;
+  border-radius: 0 0 0 7vw;
+  content: ' ';
+  display: block;
+  height: 560px;
+  position: absolute;
+  right: 0;
+  top: -280px;
+  transform: rotate(-21deg);
+  width: 70vw;
+  z-index: -1;
+}
+
+section h1, section h2, section h3, section p, section a {
+  display: block;
+  margin: 21px 0;
+  padding: 0;
+}
+
+section h4, section p, section a {
+  margin: 14px 0;
+}
+
+
+h1 {
+  color: $green;
+  font-size: $extra-large;
+  line-height: $extra-large;
+}
+
+section h3 {
+  border-bottom: solid 3px $yellow;
+  color: $pale-grey;
+  display: inline-block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: $green;
+  font-size: $medium;
+  font-weight: 700;
+}
+
+.inner-page {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 14px 35px;
+  position: relative;
+}
+
+.navigation a span {
+  font-size: 0;
+}
+
+.navigation .hamburger {
+  display: none;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 35;
+}
+
+.navigation .hamburger:before {
+  background-image: url("../images/hamburger.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: ' ';
+  display: block;
+  height: 35px;
+  width: 35px;
+}
+
+.navigation ul {
+  float: right;
+}
+
+.navigation li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 14px;
+}
+
+.navigation a {
+  color: $green;
+  font-size: $large;
+  text-decoration: none;
+}
+
+img.responsive {
+  display: block;
+  max-width: 100%;
+}
+
+.button {
+  background: $green;
+  border-radius: 28px;
+  color: $white;
+  display: inline-block;
+  font-weight: 700;
+  padding: 12.5px 28px;
+  text-decoration: none;
+}
+
+.container-logo {
+  max-width: 280px;
+  position: absolute;
+}
+
+.tiles {
+  margin: 0 auto;
+  width: 84%;
+}
+
+.tile {
+  background: $white;
+  box-shadow: 0 0 7px $light-grey;
+  border-radius: 7px;
+  font-size: $small;
+  margin: 0 14px;
+  min-height: 245px;
+  padding: 0 14px;
+}
+
+.tile .container-image {
+  background: $pale-green;
+  border-radius: 7px 7px 0 0;
+  margin: 0 -14px;
+  padding: 21px;
+}
+
+.tile h4 {
+ margin-bottom: 0;
+}
+
+.tile h4 + p {
+  margin-top: 7px;
+}
+
+.step {
+  counter-increment: step-counter;
+  padding: 0!important;
+}
+
+.step > div {
+  background: $white;
+  box-shadow: 0 0 7px $light-grey;
+  border-radius: 7px;
+  font-size: $small;
+  margin: 7px;
+  min-height: 182px;
+  padding: 21px 21px 0;
+  position: relative;
+  text-align: left;
+}
+
+.step > div:before {
+  background: $green;
+  border-radius: 7px 0 7px 0;
+  color: $white;
+  content: counter(step-counter);
+  font-size: $large;
+  height: 49px;
+  left: 0;
+  padding: 7px 0 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 49px;
+}
+
+.step .container-image {
+  float: left;
+  margin: 14px;
+  width: 105px;
+}
+
+.ball {
+  left: 49%;
+  position: absolute;
+  top: 140px;
+  text-align: center;
+}
+
+.ball.schools {
+  left: 63%;
+  top: 280px;
+}
+
+.ball.charities {
+  left: 77%;
+}
+
+.ball:before {
+  background: $pale-green;
+  background-image: url("../images/jersey3x.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 77px;
+  border-radius: 50%;
+  content: ' ';
+  display: block;
+  height: 105px;
+  width: 105px;
+}
+
+.ball.schools:before {
+  background-image: url("../images/school3x.png");
+}
+
+.ball.charities:before {
+  background-image: url("../images/charity3x.png");
+}
+
+.ball h4 {
+  margin-top: 7px;
+}
+
+.hero {
+  background-position-x: 65%;
+  background-image: url(../images/graphic_top3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 49px 0;
+}
+
+.hero p {
+  max-width: 50%;
+}
+
+.benefits {
+  text-align: center;
+}
+
+.benefits h1 + p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+}
+
+.audience {
+  overflow: hidden;
+  position: relative;
+}
+
+.audience:after {
+  background: $pale-yellow;
+  bottom: -280px;
+  border-radius: 7vw;
+  content: ' ';
+  display: block;
+  height: 560px;
+  position: absolute;
+  left: -140px;
+  transform: rotate(-14deg);
+  width: 70vw;
+  z-index: -1;
+}
+
+.audience .headline {
+  margin-top: 210px;
+}
+
+.audience p {
+  max-width: 50%;
+}
+
+.get-started {
+  text-align: center;
+}
+
+.marketing {
+  overflow: hidden;
+  position: relative;
+}
+
+.marketing .headline {
+  background-position-x: 91%;
+  background-image: url(../images/reach_graphic3x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 105px 0 35px;
+  padding: 0 0 70px;
+}
+
+.marketing:after {
+  background: $pale-blue;
+  bottom: -280px;
+  border-radius: 7vw;
+  content: ' ';
+  display: block;
+  height: 560px;
+  position: absolute;
+  right: -140px;
+  transform: rotate(14deg);
+  width: 70vw;
+  z-index: -1;
+}
+
+.marketing p {
+  max-width: 50%;
+}
+
+.signup {
+  background: $green;
+  font-size: $large;
+  padding: 35px 35px 70px;
+  position: relative;
+  text-align: center;
+}
+
+.signup * {
+  color: $white;
+}
+
+.signup .button {
+  background: $yellow;
+}
+
+.signup .headline:before, .signup .headline:after {
+  background-image: url("../images/signup_left3x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  content: ' ';
+  height: 70px;
+  left: 35%;
+  position: absolute;
+  transform: translateX(-100%);
+  width: 140px;
+  z-index:35;
+}
+
+.signup .headline:after {
+  background-image: url("../images/signup_right3x.png");
+  height: 119px;
+  left: auto;
+  right: 35%;
+  transform: translateX(100%);
+}
+
+
+.footer {
+  background: $grey;
+  color: $white;
+  padding: 35px;
+  text-align: center;
+}
+
+.footer:before {
+  background-image: url("../images/rafflebox_icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: 112px;
+  top: 0;
+  transform: translateY(-70%);
+  width: 112px;
+}
+
+@media(max-width: 767px) {
+
+  body, html {
+    font-size: $small;
+  }
+
+  h1 {
+    font-size: $large;
+  }
+
+  .inner-page {
+    padding: 14px;
+  }
+
+  .container-logo {
+    max-width: 210px;
+  }
+
+  .navigation .hamburger {
+    display: block;
+  }
+
+  .navigation .hamburger + ul {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .hero {
+    background-position-x: 98%;
+    padding: 0;
+  }
+
+  .hero h1{
+    max-width: 56%;
+  }
+
+  .hero p {
+    max-width: 77%;
+  }
+
+  .benefits h1 + p {
+    max-width: 98%;
+  }
+
+  .tiles {
+    width: 100%;
+  }
+
+  .tiles > div {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .tile {
+    font-size: $extra-small;
+    margin: 0 3px;
+    min-height: 196px;
+    padding: 0 3px;
+  }
+
+  .tile .container-image {
+    margin: 0 -3px;
+    padding: 7px;
+  }
+
+  .step > div {
+    min-height: 140px;
+    padding: 21px 14px 21px;
+  }
+
+  .step > div:before {
+    font-size: 21px;
+    height: 35px;
+    padding: 3.5px 0 0;
+    width: 35px;
+  }
+
+  .step .container-image {
+    margin: 14px 14px 49px;
+    width: 70px;
+  }
+
+  .ball {
+    left: 49%;
+    top: 0;
+  }
+
+  .ball.schools {
+    left: 63%;
+    top: 84px;
+  }
+
+  .ball.charities {
+    left: auto;
+    right: -7px;
+  }
+
+  .ball h4 {
+    font-size: 0;
+  }
+
+  .ball:before {
+    transform: scale(0.70);
+  }
+
+  .audience:after {
+    bottom: -420px;
+    left: auto;
+    right: 0;
+    width: 767px;
+  }
+
+  .audience .headline {
+    margin-top: 0;
+  }
+
+  .audience p {
+    max-width: 63%;
+  }
+
+  .marketing:after {
+    background: $pale-blue;
+    bottom: -420px;
+    left: 14%;
+    right: auto;
+    width: 767px;
+  }
+
+  .marketing .headline {
+    background-position-x: 126%;
+    background-size: 63%;
+    margin: 0 0;
+    padding: 35px 0 0;
+  }
+
+  .marketing h1 {
+    max-width: 70%;
+  }
+
+  .marketing p {
+    max-width: 91%;
+  }
+
+  .signup {
+    font-size: $medium;
+    padding: 21px 0 35px;
+  }
+
+  .signup .headline:before, .signup .headline:after {
+    transform: scale(0.7);
+  }
+
+  .signup .headline:before {
+    left: 0;
+  }
+
+  .signup .headline:after {
+    right: 0;
+  }
+
+
+
+}
+
+@import "grid";
+
