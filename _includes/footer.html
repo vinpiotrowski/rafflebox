@@ -1,7 +1,29 @@
 
 <div class="footer">
+    <p>FOLLOW US</p>
+    <a href="http://twitter.com/" class="twitter"><span>Twitter</span></a>
+    <a href="http://facebook.com/" class="facebook"><span>Facebook</span></a>
     <p>info@rafflebox.com</p>
 </div>
+
+
+<script type="text/javascript">
+    var menuButton = document.getElementById("link-menu");
+    if(menuButton) {
+        menuButton.onclick = toggleMenu;
+    }
+
+    function toggleMenu(event) {
+        var el = event.target;
+        if ( -1 !== el.className.indexOf( "active" ) ) {
+            el.className = el.className.replace( " active", "" );
+        } else {
+            el.className += " active"
+        }
+        event.preventDefault();
+    }
+
+</script>
 
 
 

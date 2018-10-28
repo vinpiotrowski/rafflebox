@@ -119,7 +119,7 @@ h4 {
   display: none;
   position: absolute;
   right: 14px;
-  top: 14px;
+  top: 21px;
   z-index: 35;
 }
 
@@ -128,10 +128,16 @@ h4 {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 3px;
   content: ' ';
   display: block;
   height: 35px;
   width: 35px;
+}
+
+.navigation .hamburger.active:before {
+  background-image: url("../images/close.png");
+  background-color: $pale-grey;
 }
 
 .navigation ul {
@@ -166,6 +172,7 @@ img.responsive {
 }
 
 .container-logo {
+  margin-top: 10px;
   max-width: 280px;
   position: absolute;
 }
@@ -406,7 +413,8 @@ img.responsive {
 .footer {
   background: $grey;
   color: $white;
-  padding: 35px;
+  padding: 49px 35px 35px;
+  position: relative;
   text-align: center;
 }
 
@@ -417,9 +425,30 @@ img.responsive {
   content: "";
   display: inline-block;
   height: 112px;
+  left: 50%;
+  position:absolute;
   top: 0;
-  transform: translateY(-70%);
+  transform: translate(-50%,-49%);
   width: 112px;
+}
+
+.twitter span, .facebook span {
+  font-size: 0;
+}
+
+.twitter:before, .facebook:before {
+  background-image: url("../images/twitter3x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  height: 49px;
+  margin: 14px;
+  width: 49px;
+}
+
+.facebook:before {
+  background-image: url("../images/facebook3x.png");
 }
 
 @media(max-width: 767px) {
@@ -445,8 +474,31 @@ img.responsive {
   }
 
   .navigation .hamburger + ul {
+    margin-top: 42px;
+    padding: 0;
     max-height: 0;
     overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .navigation .hamburger.active + ul {
+    left: 0;
+    max-height: none;
+    right: 0;
+    z-index: 70;
+  }
+
+  .navigation li {
+    background: $pale-grey;
+    border-radius: 3px;
+    display: block;
+    margin: 3.5px 0;
+    padding: 7px 21px;
+  }
+
+  .navigation a {
+    color: $white;
+    font-size: $medium;
   }
 
   .hero {
@@ -580,6 +632,11 @@ img.responsive {
 
   .signup .headline:after {
     right: 0;
+  }
+
+  .footer:before {
+    height:70px;
+    width: 70px;
   }
 
 
