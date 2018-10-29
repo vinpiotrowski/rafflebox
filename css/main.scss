@@ -166,6 +166,7 @@ img.responsive {
   border-radius: 28px;
   color: $white;
   display: inline-block;
+  font-size: $medium;
   font-weight: 700;
   padding: 12.5px 28px;
   text-decoration: none;
@@ -175,6 +176,17 @@ img.responsive {
   margin-top: 10px;
   max-width: 280px;
   position: absolute;
+}
+
+.container-logo a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: block;
+  z-index: 35;
 }
 
 .tiles {
@@ -644,4 +656,5 @@ img.responsive {
 }
 
 @import "grid";
+@import "forms";
 

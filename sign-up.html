@@ -1,0 +1,93 @@
+---
+permalink: sign-up.html
+layout: default
+section: "sign-up"
+title: "Rafflebox Sign-up"
+---
+
+<div class="decoration"></div>
+
+<section class="sign-up" id="sign-up">
+    <div class="inner-page clearfix">
+        <div class="col-sm-9">
+            <h3>Sign up</h3>
+            <p>Complete this form and a member of our team will contact you to complete your organization's set up within our system.</p>
+        </div>
+        <div class="clearfix"></div>
+        <form class="col-sm-5" id="sign-up-form">
+            <label>Organization name</label>
+            <input type="text" name="organization" id="organization" required />
+
+            <label>Contact name</label>
+            <input type="text" name="name" id="name" required />
+
+            <label>Position (within organization)</label>
+            <input type="text" name="position" id="position" required />
+
+            <label>Contact phone number</label>
+            <input type="tel" name="phone" id="phone" required />
+
+            <label>Contact email</label>
+            <input type="email" name="email" id="email" required />
+
+            <label>Charitable registration number (optional)</label>
+            <input type="text" name="registration-number" id="registration-name" />
+
+            <input type="submit" class="button" id="submit" value="Submit" />
+        </form>
+    </div>
+</section>
+
+<section class="sign-up-success hide" id="sign-up-success">
+    <div class="inner-page clearfix">
+        <div class="col-sm-9">
+            <h3>Success!</h3>
+            <p>We've received your sign up request and will be contacting you shortly.</p>
+            <div class="container-image">
+                <img src="./images/confirmation3x.png" alt="" class="responsive"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sign-up-failure hide" id="sign-up-failure">
+    <div class="inner-page clearfix">
+        <div class="col-sm-9">
+            <h3>Oops, something went wrong!</h3>
+            <p>We've couldn't send your sign-up request at this time.  Please try again later.</p>
+            <div class="container-image">
+                <img src="./images/confirmation3x.png" alt="" class="responsive"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+
+    var form = document.getElementById('sign-up-form');
+    if (form.attachEvent) {
+        form.attachEvent("submit", submitSignUp);
+    } else {
+        form.addEventListener("submit", submitSignUp);
+    }
+
+    function submitSignUp(event) {
+        event.preventDefault();
+        var el =  document.getElementById("sign-up");
+        var succ = document.getElementById("sign-up-success");
+        var fail = document.getElementById("sign-up-failure");
+        if ( -1 !== el.className.indexOf( "hide" ) ) {
+            el.className = el.className.replace( " hide", "" );
+        } else {
+            el.className += " hide";
+        }
+        if ( -1 !== succ.className.indexOf( "hide" ) ) {
+            succ.className = succ.className.replace( " hide", "" );
+        } else {
+            succ.className += " hide";
+        }
+    }
+</script>
+
+
