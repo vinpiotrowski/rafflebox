@@ -1,0 +1,557 @@
+---
+layout: email
+permalink: /email-template.html
+nocrawl: true
+---
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Swoop Deals</title>
+    <!--[if (mso)|(mso 16)]>
+    <style type="text/css">
+        a {text-decoration: none;}
+    </style>
+    <![endif]-->
+</head>
+<body marginwidth="0" marginheight="0" bgcolor="#E9F8FB"
+      style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0;   width: 100% !important;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; "
+      offset="0" topmargin="0" leftmargin="0" cz-shortcut-listen="true">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.5"/>
+
+<style type="text/css">
+    @import url(//fonts.googleapis.com/css?family=Lato:400,900);
+
+    body {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        width: 100% !important;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        -webkit-font-smoothing: antialiased !important;
+    }
+
+    img {
+        border: 0 !important;
+        outline: none !important;
+    }
+
+    table {
+        border-collapse: collapse;
+        mso-table-lspace: 0px !important;
+        mso-table-rspace: 0px !important;
+    }
+
+    td {
+        border-collapse: collapse;
+        mso-line-height-rule: exactly;
+    }
+
+    a, span {
+        mso-line-height-rule: exactly;
+    }
+
+    .ExternalClass * {
+        line-height: 100%;
+    }
+
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass a, .ExternalClass div {
+        line-height: 100%;
+    }
+
+    .f_num a {
+        color: #808080;
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 480px) {
+        table[class=wrapper] {
+            width: 100% !important;
+        }
+
+        img[class=wrapper] {
+            width: 100% !important;
+        }
+
+        table[class=main_table] {
+            width: 100% !important;
+
+        }
+
+        td[class=side] {
+            width: 20px !important;
+        }
+
+        td[class=aside] {
+            padding: 0px 10px !important;
+        }
+
+        td[class=hide] {
+            display: none !important;
+        }
+
+        table[class=hide] {
+            display: none !important;
+        }
+
+        span[class=hide] {
+            display: none !important;
+        }
+
+        td[class=block] {
+            padding-bottom: 15px !important;
+        }
+
+        br[class=break] {
+            display: none !important;
+        }
+
+        td[class=fix_height] {
+            height: 30px !important;
+        }
+
+        td[class=title] {
+            font-size: 34px !important;
+            line-height: 38px !important;
+        }
+
+        td[class=text] {
+
+        }
+
+        td[class=header-text] {
+            font-size: 1.3em !important;
+            line-height: 1.3em !important;
+            font-weight: bold !important;
+        }
+
+        td[class=disclaimer] {
+            font-size: 0.9em !important;
+
+        }
+
+        img[class=full_img] {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        td[class=copyright] {
+            font-size: 12px !important;
+            text-align: center !important;
+        }
+
+        img[class=mustache] {
+            margin: 0 auto !important;
+        }
+
+        td[class=spacer-fix] {
+            height: 20px !important;
+            line-height: 20px !important;
+        }
+
+        td[class=center-text] {
+            text-align: center !important;
+
+        }
+
+        td[class=pad_bottom1] {
+            padding-bottom: 20px !important;
+
+        }
+
+        .center-text {
+            display: block;
+            text-align: center !important;
+
+        }
+
+        .marg_bottom {
+            margin-bottom: 20px !important;
+            width: 100% !important;
+        }
+
+        .left-fix {
+            margin-left: 0px !important;
+            width: 100% !important;
+        }
+
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 550px) {
+        table[class=wrapper] {
+            width: 100% !important;
+        }
+
+        table[class=main_table] {
+            width: 100% !important;
+        }
+
+        td[class=side] {
+            width: 20px !important;
+        }
+
+        td[class=aside] {
+            padding: 0px 10px !important;
+        }
+
+        td[class=hide] {
+            display: none !important;
+        }
+
+        table[class=hide] {
+            display: none !important;
+        }
+
+        span[class=hide] {
+            display: none !important;
+        }
+
+        td[class=block] {
+            padding-bottom: 20px !important;
+        }
+
+        br[class=break] {
+            display: none !important;
+        }
+
+        td[class=fix_height] {
+            height: 20px !important;
+        }
+
+        td[class=balloon] {
+            width: 50px !important;
+            height: auto !important;
+        }
+
+        img[class=full_img] {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        td[class=copyright] {
+            font-size: 12px !important;
+            text-align: center !important;
+        }
+
+        img[class=mustache] {
+            margin: 0 auto !important;
+        }
+
+        td[class=pad_bottom1] {
+            padding-bottom: 20px !important;
+        }
+
+        .marg_bottom {
+            margin-bottom: 20px !important;
+            width: 100% !important;
+        }
+
+        .left-fix {
+            margin-left: 0px !important;
+            width: 100% !important;
+        }
+
+        td[class=center-text] {
+            text-align: center !important;
+            display: block;
+        }
+
+        .center-text {
+            display: block;
+            text-align: center !important;
+        }
+
+    }
+
+    @media only screen and (max-width: 480px) {
+
+        table[class=footerWrapper] {
+
+            width: 160px !important;
+
+        }
+
+        img[class=footerIcon] {
+
+            height: 17px !important;
+
+            width: 16px !important;
+
+        }
+
+        table[class=footerFixHeight] {
+
+            width: 7px !important;
+
+        }
+
+        td[class=footerFixHeight] {
+
+            height: 7px !important;
+
+        }
+
+        td[class=pad_bottom1] {
+            padding-bottom: 20px !important;
+
+        }
+
+        .marg_bottom {
+            margin-bottom: 20px !important;
+            width: 100% !important;
+        }
+
+        .left-fix {
+            margin-left: 0px !important;
+            width: 100% !important;
+        }
+
+        td[class=center-text] {
+            text-align: center !important;
+            display: block;
+
+        }
+
+        .center-text {
+            display: block;
+            text-align: center !important;
+
+        }
+
+        .mobile-block {
+            display: block;
+        }
+
+    }
+</style>
+
+<style type="text/css">
+    div.preheader {
+        display: none !important;
+    }
+</style>
+
+<!--<div class="preheader" style="font-size: 1px; display: none !important;">Unbelievable fares from $39</div>-->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#E9F8FB">
+    <tbody>
+    <tr>
+        <td>
+            <table width="600" style="max-width:600px;" cellspacing="0" cellpadding="0" border="0" align="center" class="main_table">
+                <tbody>
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <!-- Header Section -->
+                            <tbody>
+                            <tr>
+                                <td bgcolor="#E9F8FB">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
+                                           bgcolor="#E9F8FB">
+                                        <tbody>
+                                        <tr>
+                                            <td height="10" bgcolor="#E9F8FB">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="237" class="hide">&nbsp;</td>
+                                            <td width="189" align="center">
+                                                <img src="./images/rafflebox.png" width="210" height="40" style="display:block;" border="0" alt=""/>
+                                            </td>
+                                            <td width="237" class="hide">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10" bgcolor="#E9F8FB">&nbsp;</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr><!-- //Header Section -->
+
+                            <tr>
+                                <td bgcolor="#FFFFFF">
+                                    <a style="display: block;border-left:0px solid #FFFFFF;border-right:0px solid #FFFFFF;max-width:600px">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top">
+                                                    <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <table width="100%" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="font-family:'Lato', Calibri, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:13px">
+                                                                            <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFFFFF">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td align="center">
+
+                                                                                        <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td height="42">&nbsp;</td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+
+                                                                                        <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td align="center" style="font-family:'Lato', Calibri, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left; color: #636363; font-weight: normal; padding-left: 40px; padding-right: 40px; font-size: 16px; letter-spacing: .5px; padding-bottom: 7px;">
+                                                                                                    <h1 style="margin:0; mso-line-height-rule:exactly; font-size:42px; line-height: 1.5;">Welcome to Rafflebox.</h1>
+
+                                                                                                    <br />
+                                                                                                    
+                                                                                                    <p style="font-size: 16px; line-height:1.5;margin-top: 5px;">Quisque ac faucibus ac tellus. Massa vel, nunc curabitur tempus euismod eu, et eu eu, id maecenas laoreet. Wisi ac ipsum. Leo at quis nulla, libero orci, id tortor urna pellentesque in leo vestibulum, in sit, massa dapibus elementum. Diam velit egestas dictum id, etiam hendrerit elementum consequat, corrupti nulla arcu eros, est risus cras vehicula nunc, amet sapien consequat. Nec nec vel, eros magna, tincidunt vel cupiditate varius. Rutrum eget libero id nulla, mauris nulla sit etiam pulvinar, porttitor purus amet. Blandit lacinia luctus justo cursus odio, semper rhoncus dui quis dui eget, nonummy sit platea.</p>
+
+                                                                                                    <p style="font-size: 16px; line-height:1.5;margin-top: 5px;">Phasellus nunc possimus vestibulum rhoncus proin consectetuer. At vel. Neque libero velit cum arcu eu, lacus tincidunt libero, orci et integer, ipsum vel tempor blandit nulla aliquam, nullam sollicitudin nibh ut. Et quis tempor, dictumst a accumsan suscipit facilisis, blandit hac sed mauris at praesent, velit maecenas ante nulla neque ultrices nulla, vivamus porta. Tellus purus in aliquam, consequat sem eu nunc malesuada mollitia. Nulla wisi praesent, orci amet enim, nibh voluptas ac aliquam, nunc donec vel rutrum. Sit id. Qui ipsum sed, quam ante.</p>
+
+                                                                                                    <p style="font-size: 16px; line-height:1.5;margin-top: 5px;">Thanks,<br />The Rafflebox Team.</p>
+
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+
+                                                                                        <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td height="70">&nbsp;</td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td bgcolor="#FFFFFF">
+                                                    <!-- Footer -->
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td bgcolor="#E9F8FB">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td height="10" class="footerFixHeight" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td bgcolor="#E9F8FB">
+                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
+                                                                                   bgcolor="#E9F8FB">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td valign="top">
+                                                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                                                               align="center">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td width="10">&nbsp;</td>
+                                                                                                <td>
+                                                                                                    <table width="250" border="0" cellspacing="0" cellpadding="0"
+                                                                                                           align="left" class="wrapper">
+                                                                                                        <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="center">
+                                                                                                                <table width="100%" border="0" cellspacing="0"
+                                                                                                                       cellpadding="0" align="center">
+                                                                                                                    <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td align="left" valign="top" class="copyright" style="color:#384049;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:10px;line-height:18px; font-weight:normal;">
+                                                                                                                            <a href="https://www.rafflebox.com/" target="_blank" style="color:#313131; text-decoration:none;">rafflebox.com</a>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td bgcolor="#E9F8FB">
+                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
+                                                                                   bgcolor="#E9F8FB">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td height="10" bgcolor="#E9F8FB">&nbsp;</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="208" class="hide">&nbsp;</td>
+                                                                                    <td width="104" align="center">
+                                                                                        <table>
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a href="http://www.rafflebox.com" target="_blank"><img src="./images/rafflebox_icon.png" width="112" height="112" style="display:block; position: absolute; margin-left: -56px; margin-top: -112px;" border="0" alt=""/></a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td width="208" class="hide">&nbsp;</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td height="10" bgcolor="#E9F8FB">&nbsp;</td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="10" class="footerFixHeight" style="font-size:1px; line-height:1px;" bgcolor="#E9F8FB">&nbsp;</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!--// Footer -->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
