@@ -1,4 +1,5 @@
 # rafflebox
+=======
 
 OPTION ONE; How to build the site:
 
@@ -12,3 +13,5 @@ OPTION TWO; Use already built version
 
 1. Download source code
 2. Copy the contents of _site onto your web-server.
+
+
